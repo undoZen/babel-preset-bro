@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-dysonshell",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "dysonshell framework preferred babel preset ",
   "main": "browser.js",
   "dependencies": {
