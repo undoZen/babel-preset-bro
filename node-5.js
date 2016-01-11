@@ -3,6 +3,11 @@
 module.exports = {
     plugins: [
 
+        // (I don know what the fuck but it seems the plugin order matters)
+
+        // other utils
+        require('babel-plugin-add-module-exports'),
+
         // ES6 for node 5
         require('babel-plugin-transform-es2015-destructuring'),
         require('babel-plugin-transform-es2015-modules-commonjs'),
@@ -31,9 +36,6 @@ module.exports = {
             "module": "bluebird",
             "method": "coroutine",
         }],
-
-        // other utils
-        require('babel-plugin-add-module-exports'),
 
     ],
 };
