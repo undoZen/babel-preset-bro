@@ -15,6 +15,7 @@ plugins.unshift(
     require("babel-plugin-transform-es2015-block-scoping"),
     require("babel-plugin-transform-es2015-typeof-symbol")
 );
+plugins.push(require('fast-async'));
 
 module.exports = {
     plugins: plugins,

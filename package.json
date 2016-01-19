@@ -33,7 +33,8 @@
     "babel-plugin-transform-exponentiation-operator": "^6.3.13",
     "babel-plugin-transform-export-extensions": "^6.3.13",
     "babel-plugin-transform-function-bind": "^6.3.13",
-    "babel-plugin-transform-object-rest-spread": "^6.3.13"
+    "babel-plugin-transform-object-rest-spread": "^6.3.13",
+    "fast-async": "^6.0.11"
   },
   "devDependencies": {},
   "scripts": {
