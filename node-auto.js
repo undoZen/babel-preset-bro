@@ -2,13 +2,17 @@
 
 var semver = require('semver');
 
-var plugins = require('./node-5').plugins.slice();
+var plugins
 if (semver.satisfies(process.version, '^4')) {
-    plugins.unshift(require('babel-plugin-transform-es2015-spread'));
+  plugins = require('./node-4').plugins.slice();
 } else if (!semver.satisfies(process.version, '^5')) {
-    throw new Error('you should use node version either 4.x or 5.x, lower is not supported by dysonshell');
+  plugins = require('./node-5').plugins.slice();
+} else if (!semver.satisfies(process.version, '^6')) {
+  plugins = require('./node-6').plugins.slice();
+} else {
+  throw new Error('you should use node version 4.x or upper, lower is not supported by dysonshell');
 }
 
 module.exports = {
-    plugins: plugins,
+  plugins: plugins,
 };
