@@ -2,12 +2,14 @@
 
 module.exports = {
   plugins: [
+    // put it on first to be easy removed (for rollup)
+    require('babel-plugin-transform-es2015-modules-commonjs'),
+
     // ES6 for node 4
     require('babel-plugin-transform-es2015-spread'),
 
     // ES6 for node 5
     require('babel-plugin-transform-es2015-destructuring'),
-    require('babel-plugin-transform-es2015-modules-commonjs'),
     require('babel-plugin-transform-es2015-parameters'),
     require('babel-plugin-transform-es2015-sticky-regex'),
     require('babel-plugin-transform-es2015-unicode-regex'),
