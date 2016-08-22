@@ -7,6 +7,9 @@ module.exports = {
     require("babel-plugin-transform-es2015-literals"),
     require("babel-plugin-transform-es2015-arrow-functions"),
     require("babel-plugin-transform-es2015-block-scoped-functions"),
+
+    require("babel-plugin-transform-class-properties"), // stage-2 but order matters here
+
     require("babel-plugin-transform-es2015-classes"),
     require("babel-plugin-transform-es2015-object-super"),
     require("babel-plugin-transform-es2015-shorthand-properties"),
@@ -32,14 +35,14 @@ module.exports = {
     require("babel-plugin-transform-function-bind"),
 
     // stage-1
-    require("babel-plugin-transform-class-constructor-call"),
-    require("babel-plugin-transform-class-properties"),
-    require("babel-plugin-transform-decorators"),
     require("babel-plugin-transform-export-extensions"),
 
     // stage-2
-    require("babel-plugin-syntax-trailing-function-commas"),
     require("babel-plugin-transform-object-rest-spread"),
+
+    // stage-3
+    require("babel-plugin-syntax-trailing-function-commas"),
+    require("babel-plugin-transform-exponentiation-operator"),
     [require('fast-async'), {
       "runtimePattern": "directive"
     }]
