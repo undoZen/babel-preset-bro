@@ -5,7 +5,7 @@ module.exports = {
     require("babel-plugin-syntax-flow"),
     require("babel-plugin-transform-flow-strip-types"),
 
-    // put it on first to be easy removed (for rollup)
+    // the position is fixed so that bro-rollup preset can remove it
     require('babel-plugin-transform-es2015-modules-commonjs'),
 
     // ES6 for node 4
