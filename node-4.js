@@ -2,6 +2,9 @@
 
 module.exports = {
   plugins: [
+    require("babel-plugin-syntax-flow"),
+    require("babel-plugin-transform-flow-strip-types"),
+
     // put it on first to be easy removed (for rollup)
     require('babel-plugin-transform-es2015-modules-commonjs'),
 

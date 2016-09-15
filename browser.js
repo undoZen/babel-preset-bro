@@ -2,6 +2,9 @@
 
 module.exports = {
   plugins: [
+    require("babel-plugin-syntax-flow"),
+    require("babel-plugin-transform-flow-strip-types"),
+
     // ES6 for browser only
     require("babel-plugin-transform-es2015-template-literals"),
     require("babel-plugin-transform-es2015-literals"),
